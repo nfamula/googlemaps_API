@@ -31,7 +31,32 @@
         var LatLng = {
           lat: 43.67023, 
           lng: -79.38676
-        }
+        };
+
+        var TibetanFood = {
+          lat: 43.6396367,
+          lng: -79.4408807
+        };
+        
+        var Hairdresser = {
+          lat: 43.6399573,
+          lng: -79.4404616
+        };
+        
+        var NeighboursResturant = {
+          lat: 43.6391001,
+          lng: -79.4481668
+        };
+        
+        var FavBar = {
+          lat: 43.6461197,
+          lng: -79.4509053
+        };
+
+        var CubanFood = {
+          lat: 43.6508859,
+          lng: -79.4531954
+        };
 
         var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 4,
@@ -50,6 +75,37 @@
             animation: google.maps.Animation.DROP,
             position: LatLng,
         });
+
+        var TibetanFoodMarker = new google.maps.Marker({
+            map: map,
+            draggable: false,
+            position: TibetanFood,
+        });
+        
+        var HairdresserMarker = new google.maps.Marker({
+            map: map,
+            draggable: false,
+            position: Hairdresser,
+        });
+
+        var NeighboursResturantMarker = new google.maps.Marker({
+            map: map,
+            draggable: false,
+            position: NeighboursResturant,
+        });
+
+        var FavBarMarker = new google.maps.Marker({
+            map: map,
+            draggable: false,
+            position: FavBar,
+        });
+
+        var CubanFoodMarker = new google.maps.Marker({
+            map: map,
+            draggable: false,
+            position: CubanFood,
+        });
+
         marker.addListener('click', toggleBounce);
     }
 
